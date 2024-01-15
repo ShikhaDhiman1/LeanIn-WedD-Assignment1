@@ -1,0 +1,166 @@
+body{
+    background-color: rgb(29, 34, 75);
+    /* background-color:rgb(77, 27, 44); */
+}
+
+div:not(.div5, .div6, .div7){
+    width:150px;
+    height: 130px;
+    border-radius: 10%;
+    position:absolute;
+    transition: transform 0.2s, border-radius 0.1s;
+    transition-timing-function: linear; 
+}
+.div5, .div6, .div7{
+    transition: background-image 0.5s;
+    transition-timing-function: ease-out; 
+}
+.div5, .div6{
+    position:absolute;
+    width:150px;
+    height: 130px;
+    border-radius: 50%;
+    background-color:grey;
+    opacity: 0.7;    
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
+.div5{
+    left:70px;
+    animation-name: ball1;
+    
+}
+.div6{
+    right:70px;
+    bottom:5px;
+    animation-name: ball2;
+}
+.div1{
+    top:2%;
+    left:0px;
+    background-color: violet;
+}
+.div2{
+    top:25%;
+    right:0px;
+    background-color: indigo;
+}
+.div3{
+    top:48%;
+    left:0px;
+    background-color:blue;
+}
+.div4{
+    top:71%;
+    right:0px;
+    background-color:green;
+}
+.div1,.div3{
+    animation-name: box1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    /* animation-direction: alternate; */
+}
+.div2, .div4{
+    animation-name: box2;
+    animation-duration: 3s;
+   
+    animation-iteration-count:infinite;
+    /* animation-direction: alternate; */
+}
+.div7{
+    position:absolute;
+    width:100px;
+    height:100px;
+    left:45%;
+    border-radius: 50%;
+    animation-name:midBall;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1s;
+    background-color: red;
+    opacity: 0.6;
+
+}
+@keyframes box1{
+    0%{
+        animation-timing-function: linear;
+    }
+    50%{
+        left:89%;
+        animation-timing-function: ease-out;
+    }
+    51%{
+        background-color:violet;
+    }
+    100%{
+        animation-timing-function:linear;
+    }
+    
+}
+@keyframes box2{
+    0%{
+        animation-timing-function: linear;
+    }
+    50%{
+        right:89%;
+        animation-timing-function: ease-out;
+    }
+    51%{
+        background-color: indigo;
+    }
+    100%{
+        animation-timing-function:linear ;
+    }
+}
+@keyframes ball1 {
+    0%{
+        top:5px;
+        animation-timing-function: ease-in;
+    }
+    100%{
+        top:480px;
+        left:70px;
+        animation-timing-function: ease-out;
+    }
+}
+@keyframes ball2 {
+    0%{
+        bottom:5px;
+        animation-timing-function: ease-out;
+    }
+    100%{
+        bottom:480px;
+        animation-timing-function: ease-in;
+    }
+}
+@keyframes midBall {
+    0%{
+        top:5px;
+        animation-timing-function: ease-in;
+        
+    }
+    100%{
+        top:480px;
+        animation-timing-function: ease-out;
+    }
+}
+.div7:hover{
+    background-image: url("firework2.gif");
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    opacity:0.8;
+    
+}
+.div5:hover, .div6:hover{
+    background-image: url("firework2.gif");
+    background-size: 150px 130px;
+    background-repeat: no-repeat;
+    opacity:0.8;
+}
+.div1:hover, .div2:hover,.div3:hover, .div4:hover{
+    transform:rotate(180deg);
+    border-radius: 50%;
+}
